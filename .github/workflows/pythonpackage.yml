@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
         # psycopg2==2.8.3 needs pg_config
-        apt-get -y install libpq-dev
+        sudo apt-get -y update && sudo apt-get -y install libpq-dev
         python -m pip install --upgrade pip
         pip install -r test-requirements.txt
     - name: Lint with flake8
